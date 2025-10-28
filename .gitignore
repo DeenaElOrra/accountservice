@@ -58,3 +58,4 @@ replay_pid*
 .vscode/
 .DS_Store
 .mvn/
+k8s/postgres-config.yaml
