@@ -70,7 +70,7 @@ public class AccountService {
     }
 
     public void delete(String id) {
-        accountRepository.delete(new AccountModel().id(id));
+        accountRepository.deleteById(id);
     }
 
     private String hash(String pass) {

@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: account_service
+  name: account-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: account_service
+      app: account-service
   template:
     metadata:
       labels:
-        app: account_service
+        app: account-service
     spec:
       containers:
-        - name: account_service
-          image: deenaelorra/account_service:latest
+        - name: account-service
+          image: deenaelorra/account:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -55,9 +55,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: account_service
+  name: account-service
   labels:
-    app: account_service
+    app: account-service
 spec:
   type: ClusterIP
   ports:
@@ -66,4 +66,4 @@ spec:
       targetPort: 8080
 
   selector:
-    app: account_service
+    app: account-service

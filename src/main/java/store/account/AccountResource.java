@@ -57,6 +57,7 @@ public class AccountResource implements AccountController {
 
     @Override
     public ResponseEntity<Void> delete(String id) {
+        accountService.delete(id);
         return ResponseEntity
             .noContent()
             .build();
